@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wunschliste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Leiste">
+        <h1>Wunschliste für meinen 20. Geburtstag</h1>
+    </div>
+    
+    <p id="Countdown" class="Countdown"></p>
+    
+    <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 2, 2026 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("Countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("Countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <div class="Mangas">
+        <p class="Mangatext">Mangas</p>
+        <p class="Mangauntertext">Boruto Band 3 bis 10</p>
+    </div>
+    <!-- Die einzelnen Mangas -->
+    <div class="Mangareihe">
+        <a href="https://www.thalia.de/shop/home/artikeldetails/A1046629596">
+            <img src="images/Boruto_Band_3.jpeg">
+        </a>
+        <a href="https://www.thalia.de/shop/home/artikeldetails/A1048924557">
+            <img src="images/Boruto_Band_4.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1051908428">
+            <img src="images/Boruto_Band_5.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1053560113">
+            <img src="images/Boruto_Band_6.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1053560142">
+            <img src="images/Boruto_Band_7.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1056169070">
+            <img src="images/Boruto_Band_8.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1057585537">
+            <img src="images/Boruto_Band_9.jpeg">
+        </a>
+         <a href="https://www.thalia.de/shop/home/artikeldetails/A1057586085">
+            <img src="images/Boruto_Band_10.jpeg">
+        </a>
+    </div>
+    <a href="https://www.thalia.de/geteilteliste?eintraege=QTEwNTc1ODYwODUsQTEwNDY2Mjk1OTYsQTEwNDg5MjQ1NTcsQTEwNTE5MDg0MjgsQTEwNTM1NjAxMTMsQTEwNTM1NjAxNDIsQTEwNTYxNjkwNzAsQTEwNTc1ODU1Mzc%3D">
+        <button class="Allekaufbutton">Oder alle Bände kaufen :)</button>
+    </a>
+    <p class="Boxtext">Japanischer Snack Box</p>
+    <a href="https://www.momogo.de/produkt/japan-snack-box">
+        <img src="images/japanischer_snack_box.jpeg" class="snackbox">
+    </a>
+    <p class="Funkotext">Figuren</p>
+    <div class="Funkopopreihe">
+        <figure>
+            <a href="https://www.elbenwald.de/naruto/naruto-new-classics-naruto-funko-pop-figur?_gl=1*1mjzoef*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAhaHMBhD2ARIsAPAU_D7oVtMA1wqb9QeVo91-1GcxofzOF2aUo1RrOZMAxlhyPX5dvLvh3GQaApynEALw_wcB&gbraid=0AAAAA_fuchwk-3_ewXITurNvFqGOjF3HI">
+                <img src="images/naruto_funkopop.jpeg">
+                <figcaption>Naruto Funko Pop</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="https://www.elbenwald.de/naruto/naruto-new-classics-sasuke-funko-pop-figur?_gl=1*1lmhxae*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAhaHMBhD2ARIsAPAU_D7oVtMA1wqb9QeVo91-1GcxofzOF2aUo1RrOZMAxlhyPX5dvLvh3GQaApynEALw_wcB&gbraid=0AAAAA_fuchwk-3_ewXITurNvFqGOjF3HI">
+                <img src="images/sasuke_funkopop.jpeg">
+                <figcaption>Sasuke Funko Pop</figcaption>
+            </a>
+        </figure>
+    </div>
+</body>
+</html>

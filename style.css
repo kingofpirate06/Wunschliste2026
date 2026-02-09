@@ -1,0 +1,190 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.Leiste{
+    display: flex;
+    background-color: rgb(0, 173, 150);
+    align-items: center;        
+    justify-content: center;    
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: Century Gothic;                
+}
+
+@keyframes Texteinblenden{
+    from {color: white;}
+    to {color: black}
+}
+
+.Mangatext{
+    text-align: center;
+    font-family: Century Gothic;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.Mangauntertext{
+    text-align: center;
+    font-family: Century Gothic;
+    margin-top: -25px;
+    font-size: 20px;
+}
+
+.Mangas{
+    color: white;
+    animation-name: Texteinblenden;
+    animation-duration: 4s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.Mangareihe{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.Mangareihe img{
+    opacity: 0;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: Bildereinblenden;
+    transition: 0.2s;
+    animation-duration: 3s; 
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.Mangareihe img:hover{
+    width: 250px;
+    cursor: pointer;
+}
+
+@keyframes Bildereinblenden{
+    from {opacity: 0;}
+    to {opacity: 1}
+}
+
+.Allekaufbutton{
+    opacity: 0;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 100px;
+    width: 200px;
+    font-size: 20px;
+    font-family: Century Gothic;
+    animation-name: Bildereinblenden;
+    transition: 0.2s;
+    animation-duration: 3s; 
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.Allekaufbutton:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.Countdown{
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 50px;
+    margin-bottom: -30px;
+    color: white;
+    animation-name: Texteinblenden;
+    animation-duration: 4s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.snackbox{
+    opacity: 0;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: Bildereinblenden;
+    transition: 0.2s;
+    animation-duration: 3s; 
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.snackbox:hover{
+    height: 350px;
+    cursor: pointer;
+}
+
+.Boxtext{
+    text-align: center;
+    font-family: Century Gothic;
+    margin-top: 100px;
+    font-size: 40px;
+    color: white;
+    animation-name: Texteinblenden;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.Funkotext{
+    text-align: center;
+    font-family: Century Gothic;
+    margin-top: 100px;
+    font-size: 40px;
+    color: white;
+    animation-name: Texteinblenden;
+    animation-duration: 4s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+.Funkopopreihe{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.Funkopopreihe img{
+    opacity: 0;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: Bildereinblenden;
+    transition: 0.2s;
+    animation-duration: 3s; 
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+}
+
+.Funkopopreihe img:hover{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+figcaption{
+    text-align: center;
+    font-family: Century Gothic;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    animation-name: Texteinblenden;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}

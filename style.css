@@ -1,7 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    justify-content: center;
 }
 
 .Leiste{
@@ -45,27 +44,34 @@ h1{
 }
 
 .Mangareihe{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .Mangareihe img{
-    opacity: 0;
-    width: 200px;
+    width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    animation-name: Bildereinblenden;
+
+    opacity: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+
+    animation: Bildereinblenden 3s 0.6s forwards;
     transition: 0.2s;
-    animation-duration: 3s; 
-    animation-delay: 0.6s;
-    animation-fill-mode: forwards;
 }
 
 .Mangareihe img:hover{
-    width: 250px;
+    transform: scale(1.15);
     cursor: pointer;
 }
+
+.Mangareihe::-webkit-scrollbar{
+    display: none;
+}
+
 
 @keyframes Bildereinblenden{
     from {opacity: 0;}
@@ -187,4 +193,42 @@ figcaption{
     animation-duration: 4s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px){
+
+    .Mangareihe{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .Mangareihe img{
+        width: 100%;
+    }
+
+
+    .Funkopopreihe{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Funkopopreihe img{
+        width: 80%;
+        height: auto;
+    }
+
+    .snackbox{
+        width: 80%;
+        height: auto;
+    }
+
+    h1{
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .Countdown{
+        font-size: 30px;
+    }
 }
